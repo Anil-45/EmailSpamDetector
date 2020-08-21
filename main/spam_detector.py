@@ -1,9 +1,3 @@
-'''
-change to working directory
-Run command python .\main\spam_detector.py
-as I am using path for the data from this folder in abspath
-or else copy data to desired location and give that path in abspath
-'''
 
 import pandas as pd
 import sklearn
@@ -11,10 +5,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn import svm
-import os
+
 
 #importing data
-data=pd.read_csv(os.path.abspath("main/spam.csv"))
+data=pd.read_csv("spam.csv")
 #splitting data 75%for training and 25% for testing
 X_train,X_test,y_train,y_test=train_test_split(data["EmailText"],data["Label"],test_size=0.25,random_state=30)
 

@@ -15,10 +15,10 @@ import os
 
 #importing data
 data=pd.read_csv(os.path.abspath("main/spam.csv"))
-#splittind data 75%for training and 25% for testing
+#splitting data 75%for training and 25% for testing
 X_train,X_test,y_train,y_test=train_test_split(data["EmailText"],data["Label"],test_size=0.25,random_state=30)
 
-#as our emails are text we are extracting features (for further details check CounterVectorizer documentation)
+#as our emails are text we are extracting features (for further details check CountVectorizer documentation)
 cv=CountVectorizer()
 X_train=cv.fit_transform(X_train)
 X_test=cv.transform(X_test)

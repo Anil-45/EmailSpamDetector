@@ -1,5 +1,5 @@
 '''
-change working directory to email_spam_detector(file name)
+change to working directory
 Run command python .\main\spam_detector.py
 as I am using path for data from this folder in abspath
 or else copy data to desired location and give that path in abspath
